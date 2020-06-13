@@ -1,4 +1,4 @@
-package com.example.chenxing;
+package com.example.cx;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,19 +6,22 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class thirdActivity extends AppCompatActivity {
+public class cx_secondActivity extends AppCompatActivity {
     private Spinner spap;
     private Spinner spap2;
+    private Spinner spap3;
     private  String[] date;
     private  String[] date2;
+    private  String[] date3;
     private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.third);
+        setContentView(R.layout.cx_second);
         spap =findViewById(R.id.sp_ap);
         spap2 =findViewById(R.id.sp_ap2);
+        spap3 =findViewById(R.id.sp_ap3);
         //为数据源设置值
         date = new String[]
                 {"学历",
@@ -28,7 +31,7 @@ public class thirdActivity extends AppCompatActivity {
                         "研究生",
                         "硕士及以上"};
         //创建数组适配器
-        adapter = new ArrayAdapter<String>(this,R.layout.spinner,date);
+        adapter = new ArrayAdapter<String>(this,R.layout.cx_spinner,date);
         // 给下拉列表控件设置适配器
         spap.setAdapter(adapter);
         date2 = new String[]
@@ -36,9 +39,21 @@ public class thirdActivity extends AppCompatActivity {
                         "男",
                         "女",};
         //创建数组适配器
-        adapter = new ArrayAdapter<String>(this,R.layout.spinner,date2);
+        adapter = new ArrayAdapter<String>(this,R.layout.cx_spinner,date2);
         // 给下拉列表控件设置适配器
         spap2.setAdapter(adapter);
+        date3 = new String[]
+                {"年龄需求",
+                        "25以下",
+                        "25-35",
+                        "35以上",
+                        "不限"
+                };
+        //创建数组适配器
+        adapter = new ArrayAdapter<String>(this,R.layout.cx_spinner,date3);
+        // 给下拉列表控件设置适配器
+        spap3.setAdapter(adapter);
+
 
     }
 }

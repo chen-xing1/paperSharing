@@ -1,4 +1,4 @@
-package com.example.chenxing;
+package com.example.cx;
 
 import org.junit.Test;
 
